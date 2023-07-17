@@ -12,12 +12,16 @@
   color: #fff;
   font-size: 1.25rem;
   background: #ff900e;
-  padding: 20px 25px;
+  padding: 15px 20px;
   font-weight: 600;
   cursor: pointer;
   border: 0;
 }
-
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #131313;
+}
 /* header */
 header {
   background: rgba(255, 144, 14, 0.1);
@@ -27,11 +31,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.nav-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--dark-01, #131313);
 }
 nav > ul {
   display: flex;
@@ -94,6 +93,44 @@ main {
   color: #ff900e;
   font-weight: 700;
 }
+/* facts sec */
+.facts-card-container {
+  display: flex;
+  justify-content: space-around;
+}
+.facts-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px;
+}
+
+.facts-card-container .card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 5px;
+}
+
+.facts-card-container .card-stats {
+  font-size: 2.8rem;
+  color: #424242;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sponsors {
+  text-align: center;
+}
+.sponsor-img-cont {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+}
+.sponsor-img-cont img {
+  width: 165px;
+}
+
 
 /* responsive style */
 /* mobile */
@@ -102,12 +139,21 @@ main {
     padding: 20px;
   }
   nav,
-  .teams-container {
-    flex-direction: column;
-  }
+  .teams-container,
+  .facts-card-container,
+  .sponsor-img-cont
+   {
+      flex-direction: column;
+   }
   .teams-content {
     width: 342px;
   }
+  .facts-card-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+
   .teams-img-container {
     grid-template-columns: 1fr;
   }
@@ -118,10 +164,21 @@ main {
     padding: 50px;
   }
   nav,
-  .teams-container {
+  .teams-container,
+  .sponsor-img-cont{
     flex-direction: column;
   }
   .teams-content {
     width: 708px;
   }
+  .facts, .sponsors {
+    width: 800px;
+    text-align: center;
+  }
+  .facts-card-container .card,
+  .sponsors{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
 }
